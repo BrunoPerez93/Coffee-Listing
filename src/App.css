@@ -1,4 +1,57 @@
 .App {
- background-color: #111315;
- height: 100vh;
+  background-color: #111315;
+  height: 100%;
+}
+
+.back-img {
+  background-image: url('./assets/bg-cafe.jpg');
+  height: 60vh;
+}
+
+.back-cards {
+  background-color: #1B1D1F;
+  padding: 10%;
+  margin: 0 10%;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; 
+}
+
+@media screen and (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.containerTitle{
+  display: grid;
+  place-items: center;
+  margin: 0 150px 15px;
+}
+
+.title {
+  color: #FEF7EE;
+  font-size: 32px;
+}
+
+.text {
+  color: #6F757C;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.button {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #FEF7EE;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.button:hover {
+ background-color: #6F757C;
 }
