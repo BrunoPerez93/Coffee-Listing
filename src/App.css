@@ -1,6 +1,5 @@
 .App {
-  background-color: #111315;
-  height: 100%;
+  margin-bottom: 20%;
 }
 
 .back-img {
@@ -10,8 +9,8 @@
 
 .back-cards {
   background-color: #1B1D1F;
-  padding: 10%;
-  margin: 0 10%;
+  padding: 5%;
+  margin: -150px 10%; 
 }
 
 .card-container {
@@ -29,7 +28,7 @@
 .containerTitle{
   display: grid;
   place-items: center;
-  margin: 0 150px 15px;
+  margin-bottom: 30px;
 }
 
 .title {
@@ -40,6 +39,7 @@
 .text {
   color: #6F757C;
   margin-top: 10px;
+  margin-bottom: 10px;
   font-size: 16px;
 }
 
@@ -50,6 +50,8 @@
   padding: 10px;
   font-weight: bold;
   border-radius: 20px;
+  background-color: #6F757C;  
+  margin-left: 5px;
 }
 
 .button:hover {

@@ -4,17 +4,16 @@ import {
   CardBody,
   CardFooter,
   Typography,
-  Button,
 } from "@material-tailwind/react";
 
-const CardItem = ({ img, title, price, votes }) => {
+const CardItem = ({ img, title, price, alt, votes, isSoldOut, isAvailable }) => {
   return (
     <Card className="mt-6 w-96">
       <CardHeader color="blue-gray" className="relative h-56">
         <img
           style={styles.img}
           src={img}
-          alt="card-image"
+          alt={alt}
         />
       </CardHeader>
       <CardBody style={styles.content}>
@@ -28,6 +27,8 @@ const CardItem = ({ img, title, price, votes }) => {
       <CardFooter className="pt-0">
         <Typography style={styles.votes}>
           {votes}
+          {isSoldOut && <Typography style={styles.sold}>Sold Out</Typography>}
+          {isAvailable}
         </Typography>
       </CardFooter>
     </Card>
@@ -53,7 +54,13 @@ const styles = {
     borderRadius: 10,
   },
   votes: {
+    display: 'flex',
     color: '#FEF7EE',
+    justifyContent: 'space-between',
+    marginTop: 5,
+  },
+  sold: {
+    color: '#ED735D',
   },
 }
 
