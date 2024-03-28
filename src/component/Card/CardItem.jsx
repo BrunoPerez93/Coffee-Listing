@@ -6,7 +6,10 @@ import {
   Typography,
 } from "@material-tailwind/react";
 
-const CardItem = ({ img, title, price, alt, votes, isSoldOut, isAvailable }) => {
+
+
+const CardItem = ({ img, title, price, alt, votes, popular, isAvailable }) => {
+
   return (
     <Card className="mt-6 w-96">
       <CardHeader color="blue-gray" className="relative h-56">
@@ -27,7 +30,7 @@ const CardItem = ({ img, title, price, alt, votes, isSoldOut, isAvailable }) => 
       <CardFooter className="pt-0">
         <Typography style={styles.votes}>
           {votes}
-          {isSoldOut && <Typography style={styles.sold}>Sold Out</Typography>}
+          {popular && <Typography style={styles.sold}>Sold Out</Typography>}
           {isAvailable}
         </Typography>
       </CardFooter>
