@@ -11,19 +11,20 @@ import {
 const CardItem = ({ img, title, price, alt, votes, popular, isAvailable }) => {
 
   return (
-    <Card className="mt-6 w-96">
+    <Card className="m-2 ">
       <CardHeader color="blue-gray" className="relative h-56">
         <img
           style={styles.img}
           src={img}
           alt={alt}
+         className="w-full h-full object-cover"
         />
       </CardHeader>
       <CardBody style={styles.content}>
         <Typography variant="h5" color="blue-gray" className="mb-2" style={styles.title}>
           {title}
         </Typography>
-        <Typography style={styles.price}>
+        <Typography style={styles.price} className="text-[8px]">
           {price}
         </Typography>
       </CardBody>
@@ -61,6 +62,7 @@ const styles = {
     color: '#FEF7EE',
     justifyContent: 'space-between',
     marginTop: 5,
+    fontSize: 12,
   },
   sold: {
     color: '#ED735D',
